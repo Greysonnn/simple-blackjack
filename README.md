@@ -1,0 +1,2 @@
+# simple-blackjack
+Blackjack game 
