@@ -32,7 +32,9 @@ function renderGame() {
 function newCard() {
     console.log('Drawing new card from deck')
     let card = 3
-    sum = sum + card
+    sum += card
+    cards.push(card)
+    console.log(cards)
     renderGame()
 }
 
