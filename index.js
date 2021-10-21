@@ -1,5 +1,5 @@
 //
-//
+// 
 let cards = []
 let sum = 0
 let hasBlackJack = false
