@@ -1,5 +1,14 @@
 //
 //
+
+let player = {
+    name: "Lord Farquadd",
+    chips: 100,
+    sayHello: function() {
+        console.log("Hello!")
+    }
+}
+
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -9,8 +18,9 @@ let message = ''
 let messageEl = document.getElementById('message-el')
 let sumEl = document.querySelector('#sum-el')
 let cardsEl = document.querySelector('#cards-el')
+let playerEl = document.querySelector('#player-el')
 
-console.log(cards)
+playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
 
@@ -46,17 +56,16 @@ function renderGame() {
          hasBlackJack = true
      } else {
          message = "You're out of the game!"
-         busted = false
+         isAlive = false
      }
      messageEl.textContent = message
 }
 
 function newCard() {
-    console.log('Drawing new card from deck') //for testing purposes
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    console.log(cards)
-    renderGame()
+    if ( isAlive === true && hasBlackJack === false ) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }
-// Cash out
