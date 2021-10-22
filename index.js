@@ -1,5 +1,5 @@
 //
-// 
+//
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -59,3 +59,4 @@ function newCard() {
     console.log(cards)
     renderGame()
 }
+// Cash out
